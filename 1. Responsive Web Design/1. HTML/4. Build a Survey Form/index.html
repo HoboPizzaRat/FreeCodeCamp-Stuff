@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <h1 id="title">Eben cookie form</h1>
+    <p id="description">We gonna survey some cookies idk</p>
+
+    <form id="survey-form" method="POST">
+      <label id="name-label" for="name">Your name</label>
+      <input type="text" id="name" placeholder="put something" required>
+
+      <label id="email-label" for="email">Email</label>
+      <input type="email" id="email" placeholder="put something" required>
+
+      <label id="number-label" for="number">Age</label>
+      <input type="number" id="number" min="0" max="100" placeholder="put something" required>
+
+      <select id="dropdown">
+        <option>kekkonen</option>
+        <option>kakkonen</option>
+      </select>
+
+      <label for="like-cookies">Yes</label>
+      <input type="radio" name="guuguu" id="like-cookies" value="yes">
+
+      <label for="dont-like-cookies">No</label>
+      <input type="radio" name="guuguu" id="dont-like-cookies" value="no">
+
+      <label for="disabled">I am disabled</label>
+      <input type="checkbox" value="kukka" id="disabled">
+
+      <label for="enabled">I am enabled</label>
+      <input type="checkbox" value="kekke" id="enabled">
+
+      <textarea></textarea>
+
+      <button id="submit"></button>
+    </form>
+  </body>
+</html>
