@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: burlywood;
+}
+main{
+  margin: 40px auto;
+  max-width: 500px;
+  background-color: chocolate;
+  padding: 30px;
+  padding-top: 40px;
+}
+h2{
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: solid 5px black;
+  color: white;
+}
+a{
+  text-decoration: none;
+}
+.todo-list > li{
+  list-style-type: none;
+  margin-bottom: 20px;
+  background-color: darksalmon;
+  list-style-position: inside;
+  padding: 10px;
+  border-radius: 10px;
+  border: 5px solid coral;
+}
+a:link{
+  color: red;
+  text-decoration: none;
+}
+a:hover{
+  color: black;
+}
+a:active{
+  color: pink;
+}
+a:focus{
+  color: pink;
+  outline: solid; 
+}
+a:visited{
+  color: yellow;
+}
