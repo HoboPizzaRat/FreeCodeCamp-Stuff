@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(pink, red);
+  height: 100vh;
+}
+.form-container{
+  margin: 0 auto;
+  margin-top: 20vh;
+  max-width: 600px;
+  width: 60vw;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+section{
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+section:last-of-type{
+  margin-bottom: 0;
+}
+label{
+  font-size: 1.2rem;
+  color: grey;
+  margin: 1px;
+}
+input, textarea{
+  width: 100%;
+  padding: 1px;
+  margin: 1px;
+}
+button{
+  width: 100%;
+  margin: 20px auto;
+  margin-bottom: 0;
+  background-color: white;
+  box-shadow: 1px 1px 2px 2px;
+  border: none;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+button:hover{
+  background-color: grey;
+}
