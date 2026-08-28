@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+footer{
+  background-color: burlywood;
+  padding: 20px;
+}
+footer ul{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+footer p{
+  text-align: center;
+}
+footer ul li{
+  margin: 5px 10px;
+  list-style: none
+}
+footer ul li a{
+  font-size: 2rem;
+}
+.icons li:hover{
+  transform: rotate(10deg) scale(1.4);
+  transition-duration: 0.3s;
+}
