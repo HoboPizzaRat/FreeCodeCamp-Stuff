@@ -25,3 +25,15 @@ li:hover{
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
+.theme-dark{
+  background-color: rgb(68, 68, 68);
+}
+.theme-light{
+  background-color: rgb(211, 211, 211);
+}
+.theme-salmon{
+  background-color: rgb(227, 138, 138);
+}
+.theme-lemon{
+  background-color: rgb(235, 255, 51);
+}

@@ -2,22 +2,22 @@ const themes = [
   {
     name: "dark",
     message: "fuck dark",
-    color: "black"
+    cls: "theme-dark"
   },
   {
     name: "light",
     message: "fuck light",
-    color: "white"
+    cls: "theme-light"
   },
   {
     name: "salmon",
     message: "fuck salmon",
-    color: "salmon"
+    cls: "theme-salmon"
   },
   {
     name: "lemon",
     message: "fuck lemon",
-    color: "yellow"
+    cls: "theme-lemon"
   }
 ];
 const themeSwitcherButton = document.getElementById("theme-switcher-button");
@@ -30,11 +30,14 @@ const lemonTheme = document.getElementById("theme-lemon");
 
 const themeList = [darkTheme, lightTheme, salmonTheme, lemonTheme];
 
-function changeTheme(theme){
+function changeTheme(newTheme){
   let body = document.querySelector("body");
-  body.style.backgroundColor = theme.color;
-  let p = document.querySelector("p");
-  p.style.textContent = theme.message;
+  for(let theme of themes){
+    body.classList.remove(theme.cls);
+  }
+  body.classList.add(newTheme.cls);
+  let p = document.querySelector('[aria-live="polite"]')
+  p.textContent = newTheme.message;
 }
 themeList.forEach((themeItem, index) => {
   themeItem.addEventListener("click", () => {
@@ -43,19 +46,12 @@ themeList.forEach((themeItem, index) => {
 });
 
 themeSwitcherButton.addEventListener("click", () => {
-  const opposite = themeDropDown.style.display == "block" ? "none" : "block";
-  themeDropDown.style.display = opposite;
-  if(opposite == "block"){
+  if(themeDropDown.hidden){
     themeDropDown.removeAttribute("hidden");
-    themeSwitcherButton.setAttribute("aria-expanded", "false");
-  }else{
-    themeDropDown.setAttribute("hidden", "true");
     themeSwitcherButton.setAttribute("aria-expanded", "true");
 
+  }else{
+    themeDropDown.setAttribute("hidden", "true");
+    themeSwitcherButton.setAttribute("aria-expanded", "false");
   }
 });
-
-themeSwitcherButton.addEventListener("click", () => {
-  
-  console.log("this occurs")
-})
